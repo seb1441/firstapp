@@ -2,11 +2,16 @@
 
   <p id="notice"><%= notice %></p>
 
-  <div class="card text-center" style="width: 256px;">
+  <div class="card mx-auto" style="width: 300px;">
     <img class="card-img-top" src="<%= @product.image_url %>" alt="Card image cap">
     <div class="card-block">
       <h4 class="card-title"><%= @product.name %></h4>
       <p class="card-text"><%= @product.description %></p>
+      <br>
+      <p class="card-text"><strong>Color: </strong><%= @product.color %></p>
+      <p class="card-text"><strong>Price: </strong><%= @product.price %>$</p>
+      <br>
+      <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(@product.updated_at) %> ago</small></p>
     </div>
     <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='<%= edit_product_path(@product) %>';">Edit</button>
     <button type="button" class="btn btn-secondary btn-sm" onclick="location.href='<%= products_path %>';">Back</button>

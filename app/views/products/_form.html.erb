@@ -10,20 +10,39 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
+  <div class="field form-group row">
+    <div class="col-2 col-form-label"><%= f.label :name %></div>
+    <div class="col-10">
+      <%= f.text_field :name %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :description %>
-    <%= f.text_area :description %>
+  <div class="field form-group row">
+    <div class="col-2 col-form-label"><%= f.label :description %></div>
+    <div class="col-10">
+      <%= f.text_area :description %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
+  <div class="field form-group row">
+    <div class="col-2 col-form-label"><%= f.label :image_url %></div>
+    <div class="col-10">
+      <%= f.text_area :image_url %>
+    </div>
+  </div>
+
+  <div class="field form-group row">
+    <div class="col-2 col-form-label"><%= f.label :color %></div>
+    <div class="col-10">
+      <%= f.text_area :color %>
+    </div>
+  </div>
+
+  <div class="field form-group row">
+    <div class="col-2 col-form-label"><%= f.label :price %></div>
+    <div class="col-10">
+      <%= f.text_area :price %>
+    </div>
   </div>
 
   <div class="actions">
