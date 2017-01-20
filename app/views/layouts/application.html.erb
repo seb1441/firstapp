@@ -22,7 +22,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == "static_pages" %>">
-            <a class="nav-link" href="static_pages/index">HOME</a>
+            <a class="nav-link" href="/static_pages/index">HOME</a>
           </li>
           <li class="nav-item <%= 'active' if params[:controller] == 'products' %>">
             <a class="nav-link" href="<%= products_path %>">PRODUCTS</a>
