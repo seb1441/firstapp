@@ -1,52 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>WebSeb - <%= params[:action].capitalize %></title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <%= csrf_meta_tags %>
+    <head>
+        <title>WebSeb -
+            <%= params[:action].capitalize %></title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> -->
-  </head>
+    </head>
 
-  <body>
-    <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="<%= root_path %>"><%= image_tag("TestLogo2.png") %></a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == "static_pages" %>">
-            <a class="nav-link" href="/static_pages/index">HOME</a>
-          </li>
-          <li class="nav-item <%= 'active' if params[:controller] == 'products' %>">
-            <a class="nav-link" href="<%= products_path %>">PRODUCTS</a>
-          </li>
-          <li class="nav-item <%= 'active' if params[:action] == 'about' %>">
-            <a class="nav-link" href="/static_pages/about">ABOUT</a>
-          </li>
-          <li class="nav-item <%= 'active' if params[:action] == 'contact' %>">
-            <a class="nav-link" href="/static_pages/contact">CONTACT</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+    <body>
+        <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="<%= root_path %>"><%= image_tag("TestLogo2.png") %></a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == " static_pages" %>">
+                        <a class="nav-link" href="/static_pages/index">HOME</a>
+                    </li>
+                    <li class="nav-item <%= 'active' if params[:controller] == 'products' %>">
+                        <a class="nav-link" href="<%= products_path %>">PRODUCTS</a>
+                    </li>
+                    <li class="nav-item <%= 'active' if params[:action] == 'about' %>">
+                        <a class="nav-link" href="/static_pages/about">ABOUT</a>
+                    </li>
+                    <li class="nav-item <%= 'active' if params[:action] == 'contact' %>">
+                        <a class="nav-link" href="/static_pages/contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
-    <hr>
+        <hr>
 
-    <%= yield %>
+        <%= yield %>
 
-    <hr>
+        <hr>
 
-    <footer>
-      <div id="footer" class="container-fluid">
-        <p class="text-center">Copyright &copy; 2017 Sébastien Auriault</p>
-      </div>
-    </footer>
-  </body>
+        <footer>
+            <div id="footer" class="container-fluid">
+                <p class="text-center">Copyright &copy; 2017 Sébastien Auriault</p>
+            </div>
+        </footer>
+    </body>
 </html>
