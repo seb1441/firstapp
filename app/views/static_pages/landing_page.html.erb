@@ -2,7 +2,7 @@
   <h1 class="text-center display-4">Featured Product</h1>
   <br>
   <div class="card mx-auto" style="width: 300px;">
-    <img class="card-img-top" src="<%= @featured_product.image_url %>" alt="Card image cap">
+    <%= image_tag(@featured_product.image_url, class: "card-img-top") %>
     <div class="card-block">
       <h4 class="card-title"><%= @featured_product.name %></h4>
       <p class="card-text"><%= @featured_product.description %></p>
