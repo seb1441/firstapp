@@ -2,18 +2,5 @@
 
   <p id="notice"><%= notice %></p>
 
-  <div class="card mx-auto" style="width: 300px;">
-    <%= image_tag(@product.image_url, class: "card-img-top") %>
-    <div class="card-block">
-      <h4 class="card-title"><%= @product.name %></h4>
-      <p class="card-text"><%= @product.description %></p>
-      <br>
-      <p class="card-text"><strong>Colour: </strong><%= @product.colour %></p>
-      <p class="card-text"><strong>Price: </strong><%= @product.price %>$</p>
-      <br>
-      <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(@product.updated_at) %> ago</small></p>
-    </div>
-    <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-secondary button-style btn-sm" %>
-    <%= link_to 'Back', products_path, class: "btn btn-secondary button-style btn-sm" %>
-  </div>
+  <%= render @product, on_products_page: false %>
 </div>

@@ -1,9 +1,14 @@
-// Place all the styles related to the static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 #footer {
   background-color: #292b2c !important;
   color: white;
   padding: 1.2rem 0 0.3rem 0;
+}
+
+#carouselExampleIndicators, .carousel-item img {
+  width: 376px;
+  height: 300px;
+}
+
+#carouselExampleIndicators {
+  margin: auto;
 }
