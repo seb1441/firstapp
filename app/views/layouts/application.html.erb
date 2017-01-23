@@ -2,10 +2,14 @@
 <html>
   <head>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <title><%= yield(:page_title) %> - WebSeb</title>
 =======
     <title>WebSeb - <%= params[:action].capitalize %></title>
 >>>>>>> fb4bccf... added carousel and refactored index and show views
+=======
+    <title>WebSeb - <%= yield(:page_title) %></title>
+>>>>>>> 3f24bf4... 4.6 fixed page titles and nav actives
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -46,16 +50,16 @@
       <a class="navbar-brand" href="<%= root_path %>"><%= image_tag("TestLogo2.png") %></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item <%= 'active' if params[:action] == 'index' && params[:controller] == " static_pages" %>">
+          <li class="nav-item <%= 'active' if yield(:page_title) == 'Home' %>">
             <a class="nav-link" href="/static_pages/index">HOME</a>
           </li>
-          <li class="nav-item <%= 'active' if params[:controller] == 'products' %>">
+          <li class="nav-item <%= 'active' if yield(:page_title) == 'Products' %>">
             <a class="nav-link" href="<%= products_path %>">PRODUCTS</a>
           </li>
-          <li class="nav-item <%= 'active' if params[:action] == 'about' %>">
+          <li class="nav-item <%= 'active' if yield(:page_title) == 'About' %>">
             <a class="nav-link" href="/static_pages/about">ABOUT</a>
           </li>
-          <li class="nav-item <%= 'active' if params[:action] == 'contact' %>">
+          <li class="nav-item <%= 'active' if yield(:page_title) == 'Contact' %>">
             <a class="nav-link" href="/static_pages/contact">CONTACT</a>
 >>>>>>> fb4bccf... added carousel and refactored index and show views
           </li>
