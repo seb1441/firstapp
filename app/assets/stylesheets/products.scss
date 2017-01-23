@@ -1,11 +1,21 @@
-// Place all the styles related to the products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 .card-img-top {
   max-width: 300px;
+  max-height: 200px;
+  border: 2px solid black;
+
 }
 
 .button-size {
-  width: 100px;
+  width: 150px;
+}
+
+ .center-button {
+  margin: auto;
+  display: block;
+  width: 158px;
+}
+
+.card {
+  width: 300px;
+  margin: auto;
 }

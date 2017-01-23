@@ -3,29 +3,10 @@
 
   <h1 class="text-center display-4">Products</h1>
   <br>
-
   <div class="card-group">
-    <% @products.each do |product| %>
-      <div class="card">
-        <%= image_tag(product.image_url, class: "card-img-top") %>
-        <div class="card-block">
-          <h4 class="card-title"><%= product.name %></h4>
-          <p class="card-text"><%= product.description %></p>
-          <br>
-          <p class="card-text"><strong>Colour: </strong> <%= product.colour %></p>
-          <p class="card-text"><strong>Price: </strong> <%= product.price %>$</p>
-          <br>
-          <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(product.updated_at) %> ago</small></p>
-        </div>
-        <%= link_to 'Show', product, class: "btn btn-secondary button-style btn-sm" %>
-        <%= link_to 'Edit', edit_product_path(product), class: "btn btn-secondary button-style btn-sm" %>
-        <%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary button-style btn-sm" %>
-      </div>
-    <% end %>
+    <%= render @products, on_products_page: true %>
   </div>
 
   <br>
-
-  <%= link_to 'Add New Product', new_product_path, class: "btn btn-primary button-style" %>
-
+  <%= link_to 'Add New Product', new_product_path, class: "btn btn-primary button-style center-button" %>
 </div>
