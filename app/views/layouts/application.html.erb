@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>WebSeb - <%= yield(:page_title) %></title>
+    <title><%= yield(:page_title) %> - WebSeb</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -12,11 +12,11 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse">
+    <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse fixed-top">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="<%= root_path %>"><%= image_tag("TestLogo2.png") %></a>
+      <a class="navbar-brand" href="<%= root_path %>"><%= image_tag("webseb_logo.png") %></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <%= 'active' if yield(:page_title) == 'Home' %>">
@@ -35,14 +35,10 @@
       </div>
     </nav>
 
-    <hr>
-
     <%= yield %>
 
-    <hr>
-
-    <footer>
-      <div id="footer" class="container-fluid">
+    <footer class="footer">
+      <div class="container">
         <p class="text-center">Copyright &copy; 2017 Sébastien Auriault</p>
       </div>
     </footer>

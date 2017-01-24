@@ -1,8 +1,7 @@
 .card-img-top {
-  max-width: 300px;
-  max-height: 200px;
+  width: 276px;
+  height: 200px;
   border: 2px solid black;
-
 }
 
 .button-size {
@@ -15,7 +14,25 @@
   width: 158px;
 }
 
-.card {
-  width: 300px;
+.card-group {
+  width: 277.5px;
   margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .card-group {
+    width: 555px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-group {
+    width: 832.5px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-group {
+    width: 1110px;
+  }
 }

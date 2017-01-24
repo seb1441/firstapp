@@ -9,3 +9,24 @@
 .container p {
   margin: 0;
 }
+
+/* Sticky footer styles */
+$navbar-and-footer-size: 3.5rem;
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  margin-bottom: $navbar-and-footer-size;
+  margin-top: $navbar-and-footer-size + 1rem;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $navbar-and-footer-size;
+  line-height: $navbar-and-footer-size;
+  background-color: #292b2c !important;
+  color: white;
+}
