@@ -17,6 +17,9 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 5dd3903... 4.6 fixed bottom button margin
   </head>
 
   <body>
@@ -25,6 +28,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="/"><%= image_tag("webseb_logo.png") %></a>
+<<<<<<< HEAD
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <%= 'active' if yield(:page_title) == 'Home' %>">
@@ -48,20 +52,26 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand" href="<%= root_path %>"><%= image_tag("TestLogo2.png") %></a>
+=======
+>>>>>>> f18e2b3... 5.1 added product validations and changed routes
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item <%= 'active' if yield(:page_title) == 'Home' %>">
-            <a class="nav-link" href="/static_pages/index">HOME</a>
+            <a class="nav-link" href="/home">HOME</a>
           </li>
           <li class="nav-item <%= 'active' if yield(:page_title) == 'Products' %>">
-            <a class="nav-link" href="<%= products_path %>">PRODUCTS</a>
+            <a class="nav-link" href="/products">PRODUCTS</a>
           </li>
           <li class="nav-item <%= 'active' if yield(:page_title) == 'About' %>">
-            <a class="nav-link" href="/static_pages/about">ABOUT</a>
+            <a class="nav-link" href="/about">ABOUT</a>
           </li>
           <li class="nav-item <%= 'active' if yield(:page_title) == 'Contact' %>">
+<<<<<<< HEAD
             <a class="nav-link" href="/static_pages/contact">CONTACT</a>
 >>>>>>> fb4bccf... added carousel and refactored index and show views
+=======
+            <a class="nav-link" href="/contact">CONTACT</a>
+>>>>>>> f18e2b3... 5.1 added product validations and changed routes
           </li>
         </ul>
       </div>
@@ -76,6 +86,7 @@
       </div>
     </footer>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
 =======
     <hr>
 
@@ -89,5 +100,7 @@
       </div>
     </footer>
 >>>>>>> fb4bccf... added carousel and refactored index and show views
+=======
+>>>>>>> 5dd3903... 4.6 fixed bottom button margin
   </body>
 </html>
