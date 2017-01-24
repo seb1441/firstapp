@@ -1,3 +1,33 @@
+$card-size: 277.5px;
+
+.card-group {
+  width: $card-size;
+  margin: auto;
+}
+
+.card {
+  width: $card-size;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .card-group {
+    width: $card-size*2;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .card-group {
+    width: $card-size*3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card-group {
+    width: $card-size*4;
+  }
+}
+
 .card-img-top {
   width: 276px;
   height: 200px;
@@ -12,27 +42,4 @@
   margin: auto;
   display: block;
   width: 158px;
-}
-
-.card-group {
-  width: 277.5px;
-  margin: auto;
-}
-
-@media screen and (min-width: 768px) {
-  .card-group {
-    width: 555px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .card-group {
-    width: 832.5px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .card-group {
-    width: 1110px;
-  }
 }
