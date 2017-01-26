@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+
+
 $card-size: 277.5px;
 
 .card-group {
@@ -32,6 +35,13 @@ $card-size: 277.5px;
   width: 276px;
   height: 200px;
   border: 2px solid black;
+=======
+.card-img-top {
+  max-width: 300px;
+  max-height: 200px;
+  border: 2px solid black;
+
+>>>>>>> fb4bccf... added carousel and refactored index and show views
 }
 
 .button-size {
@@ -42,4 +52,12 @@ $card-size: 277.5px;
   margin: auto;
   display: block;
   width: 158px;
+<<<<<<< HEAD
+=======
+}
+
+.card {
+  width: 300px;
+  margin: auto;
+>>>>>>> fb4bccf... added carousel and refactored index and show views
 }
