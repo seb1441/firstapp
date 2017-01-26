@@ -1,24 +1,7 @@
-<<<<<<< HEAD
 #carouselExampleIndicators, .carousel-item img {
-  width: 376px;
-  height: 300px;
-}
-
-#carouselExampleIndicators {
   margin: auto;
-=======
-#footer {
-  background-color: #292b2c !important;
-  color: white;
-  padding: 1.2rem 0 0.3rem 0;
->>>>>>> fb4bccf... added carousel and refactored index and show views
-}
-
-#carouselExampleIndicators, .carousel-item img {
-  width: 376px;
-  height: 300px;
-}
-
-#carouselExampleIndicators {
-  margin: auto;
+  width: $img-width ; height: $img-height;
+  @include respond-to(sm) { width: $img-width*1.5 ; height: $img-height*1.5;}
+  @include respond-to(md) { width: $img-width*2 ; height: $img-height*2;}
+  @include respond-to(lg) { width: $img-width*2.5 ; height: $img-height*2.5;}
 }

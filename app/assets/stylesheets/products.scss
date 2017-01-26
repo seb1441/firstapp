@@ -1,79 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-$card-size: 277.5px;
-
-=======
-=======
-
-
->>>>>>> f18e2b3... 5.1 added product validations and changed routes
-$card-size: 277.5px;
-
->>>>>>> 5dd3903... 4.6 fixed bottom button margin
 .card-group {
-  width: $card-size;
   margin: auto;
+  width: $img-width+$card-border;
+  @include respond-to(md) { width: ($img-width+$card-border)*2 ;}
+  @include respond-to(lg) { width: ($img-width+$card-border)*3 ;}
+  @include respond-to(xl) { width: ($img-width+$card-border)*4 ;}
 }
 
 .card {
-  width: $card-size;
+  width: $img-width+$card-border;
   margin: auto;
 }
 
-@media screen and (min-width: 768px) {
-  .card-group {
-    width: $card-size*2;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .card-group {
-    width: $card-size*3;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .card-group {
-    width: $card-size*4;
-  }
-}
-
 .card-img-top {
-  width: 276px;
-  height: 200px;
+  width: $img-width;
+  height: $img-height;
   border: 2px solid black;
-<<<<<<< HEAD
-=======
-.card-img-top {
-  max-width: 300px;
-  max-height: 200px;
-  border: 2px solid black;
-
->>>>>>> fb4bccf... added carousel and refactored index and show views
-=======
->>>>>>> 5dd3903... 4.6 fixed bottom button margin
 }
 
 .button-size {
   width: 150px;
 }
 
- .center-button {
+.center-button {
   margin: auto;
   display: block;
   width: 158px;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
-.card {
-  width: 300px;
-  margin: auto;
->>>>>>> fb4bccf... added carousel and refactored index and show views
-=======
->>>>>>> 5dd3903... 4.6 fixed bottom button margin
 }
