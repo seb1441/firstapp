@@ -10,39 +10,30 @@
       </ul>
     </div>
   <% end %>
-  <div class="field form-group row">
-    <div class="col-2 col-form-label"><%= f.label :name %></div>
-    <div class="col-10">
-      <%= f.text_field :name %>
-    </div>
+  <div class="form-group">
+    <%= f.label :name, for: "nameInput" %>
+    <%= f.text_field :name, class: "form-control", id: "nameInput", placeholder: "Enter name" %>
   </div>
 
-  <div class="field form-group row">
-    <div class="col-2 col-form-label"><%= f.label :description %></div>
-    <div class="col-10">
-      <%= f.text_area :description %>
-    </div>
+  <div class="form-group">
+    <%= f.label :description, for: "descriptionInput" %>
+    <%= f.text_area :description, class: "form-control", id: "descriptionInput", rows: "3", placeholder: "Enter description" %>
   </div>
 
-  <div class="field form-group row">
-    <div class="col-2 col-form-label"><%= f.label :image_url %></div>
-    <div class="col-10">
-      <%= f.text_area :image_url %>
-    </div>
+  <div class="form-group">
+    <%= f.label :image_url, "Image URL", for: "imageUrlInput" %>
+    <%= f.text_field :image_url, class: "form-control", id: "imageUrlInput", placeholder: "Enter image URL" %>
+    <small class="form-text text-muted">Please enter a valid URL or an image from the database including the name with the extension.</small>
   </div>
 
-  <div class="field form-group row">
-    <div class="col-2 col-form-label"><%= f.label :colour %></div>
-    <div class="col-10">
-      <%= f.text_area :colour %>
-    </div>
+  <div class="form-group">
+    <%= f.label :colour, for: "colourInput" %>
+    <%= f.text_field :colour, class: "form-control", id: "colourInput", placeholder: "Enter colour" %>
   </div>
 
-  <div class="field form-group row">
-    <div class="col-2 col-form-label"><%= f.label :price %></div>
-    <div class="col-10">
-      <%= f.text_area :price %>
-    </div>
+  <div class="form-group">
+    <%= f.label :price, for: "priceInput" %>
+    <%= f.text_field :price, class: "form-control", id: "priceInput", placeholder: "Enter price" %>
   </div>
 
   <div class="actions">

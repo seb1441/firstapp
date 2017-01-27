@@ -12,7 +12,7 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-toggleable-sm navbar-inverse bg-inverse fixed-top">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -32,6 +32,11 @@
             <a class="nav-link" href="<%= contact_path %>">CONTACT</a>
           </li>
         </ul>
+        <%= form_tag("/products", method: "get", class: "form-inline my-2 my-lg-0") do %>
+          <%#= label_tag(:q, "Search for:") %>
+          <%= text_field_tag(:q, "", class: "form-control mr-sm-2") %>
+          <%= submit_tag("Search", class: "btn btn-outline-primary my-2 my-sm-0") %>
+        <% end %>
       </div>
     </nav>
 

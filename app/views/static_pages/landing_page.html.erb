@@ -1,6 +1,6 @@
 <%= content_for :page_title, "Landing Page" %>
 <div class="container">
-  <h1 class="text-center display-4">Featured Products</h1>
+  <h1 class="text-center display-4">Featured Products <%= params[:example_key].to_i * 10 %></h1>
   <br>
 
   <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
