@@ -1,26 +1,32 @@
 <%= content_for :page_title, "Contact" %>
 <div class="container">
-  <h1>Contact Us</h1>
-
+  <h1 class="text-center display-4">Contact Us</h1>
+  <br>
   <%= flash[:notice] %>
 
   <%= form_tag("/contact/thank_you") do %>
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-sm-6">
         <div class="form-group">
-          <%= label_tag :name %>
-          <%= text_field_tag :name, nil, class: "form-control", placeholder: "Enter Name" %>
+          <%= label_tag :email, "Email Address*", for: "emailInput" %>
+          <%= text_field_tag :email, nil, type: "email", class: "form-control", id: "emailInput", placeholder: "Enter email" %>
         </div>
+      </div>
+      <div class="col-sm-6">
         <div class="form-group">
-          <%= label_tag :email, "Email Address" %>
-          <%= text_field_tag :email, nil, class: "form-control", placeholder: "Enter Email" %>
-        </div>
-        <div class="form-group">
-          <%= label_tag :message %>
-          <%= text_area_tag :message, nil, class: "form-control", placeholder: "Enter Message" %>
+          <%= label_tag :first_name, "Name*", for: "nameInput" %>
+          <%= text_field_tag :first_name, nil, class: "form-control", id: "nameInput", placeholder: "Enter name" %>
         </div>
       </div>
     </div>
-    <%= submit_tag "Send" %>
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="form-group">
+          <%= label_tag :message, "Message*", for: "messageInput" %>
+          <%= text_area_tag :message, nil, class: "form-control", id: "messageInput", placeholder: "Enter message", rows: "4" %>
+        </div>
+      </div>
+    </div>
+    <%= submit_tag "Send", type: "button", class: "btn btn-primary" %>
   <% end %>
 </div>
