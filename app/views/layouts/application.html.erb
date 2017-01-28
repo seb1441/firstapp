@@ -33,7 +33,6 @@
           </li>
         </ul>
         <%= form_tag("/products", method: "get", class: "form-inline my-2 my-lg-0") do %>
-          <%#= label_tag(:q, "Search for:") %>
           <%= text_field_tag(:q, "", class: "form-control mr-sm-2") %>
           <%= submit_tag("Search", class: "btn btn-outline-primary my-2 my-sm-0") %>
         <% end %>
