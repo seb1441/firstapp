@@ -1,7 +1,7 @@
 <%= content_for :page_title, "Contact" %>
 <div class="container">
-  <h1>Contact Us</h1>
-
+  <h1 class="text-center display-4">Contact Us</h1>
+  <br>
   <%= flash[:notice] %>
 
   <%= form_tag("/contact/thank_you") do %>
@@ -39,6 +39,6 @@
         </div>
       </div>
     </div>
-    <%= submit_tag "Send" %>
+    <%= submit_tag "Send", class: "btn btn-primary" %>
   <% end %>
 </div>
