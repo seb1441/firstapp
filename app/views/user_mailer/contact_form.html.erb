@@ -1,10 +1,26 @@
-<table>
-  <tbody>
-    <tr>
-      <td><p>You have received a new contact form message.</p></td>
-    </tr>
-    <tr>
-      <td><p><strong>Message: </strong><%= @message %></p></td>
-    </tr>
-  </tbody>
-</table>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <table>
+      <tbody>
+        <tr>
+          <td><p>You have received a new contact form message.</p></td>
+        </tr>
+        <tr>
+          <td><p>
+            <strong>Name: </strong><%= @first_name %> <%= @last_name %><br>
+            <strong>Email: </strong> <%= @email %><br>
+            <strong>Phone Number: </strong><%= @phone_number %>
+          </td></p>
+        </tr>
+        <tr>
+          <td><p><strong>Message: </strong><%= @message %></p></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
