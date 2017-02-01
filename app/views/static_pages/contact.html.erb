@@ -1,44 +1,43 @@
 <%= content_for :page_title, "Contact" %>
-<div class="container">
-  <h1 class="text-center display-4">Contact Us</h1>
-  <br>
-  <%= flash[:notice] %>
 
-  <%= form_tag("/contact/thank_you") do %>
-    <div class="row">
-      <div class="col-6">
-        <div class="form-group">
-          <%= label_tag :first_name, "First Name", for: "firstNameInput" %>
-          <%= text_field_tag :first_name, nil, class: "form-control", id: "firstNameInput", placeholder: "Enter first name", required: true %>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-group">
-          <%= label_tag :last_name, "Last Name", for: "lastNameInput" %>
-          <%= text_field_tag :last_name, nil, class: "form-control", id: "lastNameInput", placeholder: "Enter last name", required: true %>
-        </div>
+<h1 class="text-center display-4">Contact Us</h1>
+<br>
+<%= flash[:notice] %>
+
+<%= form_tag("/contact/thank_you") do %>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <%= label_tag :first_name, "First Name", for: "firstNameInput" %>
+        <%= text_field_tag :first_name, nil, class: "form-control", id: "firstNameInput", placeholder: "Enter first name", required: true %>
       </div>
     </div>
-    <div class="row">
-      <div class="col-6">
-        <div class="form-group">
-          <%= label_tag :email, "Email Address", for: "emailInput" %>
-          <%= text_field_tag :email, nil, type: "email", class: "form-control", id: "emailInput", placeholder: "Enter email", required: true %>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-group">
-          <%= label_tag :phone_number, "Phone Number", for: "phoneNumberInput" %>
-          <%= text_field_tag :phone_number, nil, class: "form-control", id: "phoneInput", placeholder: "Enter phone number", required: true %>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="form-group">
-          <%= label_tag :message, nil, for: "messageInput" %>
-          <%= text_area_tag :message, nil, class: "form-control", id: "messageInput", placeholder: "Enter message", required: true %>
-        </div>
+    <div class="col-6">
+      <div class="form-group">
+        <%= label_tag :last_name, "Last Name", for: "lastNameInput" %>
+        <%= text_field_tag :last_name, nil, class: "form-control", id: "lastNameInput", placeholder: "Enter last name", required: true %>
       </div>
     </div>
-    <%= submit_tag "Send", class: "btn btn-primary" %>
-  <% end %>
-</div>
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <%= label_tag :email, "Email Address", for: "emailInput" %>
+        <%= text_field_tag :email, nil, type: "email", class: "form-control", id: "emailInput", placeholder: "Enter email", required: true %>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <%= label_tag :phone_number, "Phone Number", for: "phoneNumberInput" %>
+        <%= text_field_tag :phone_number, nil, class: "form-control", id: "phoneInput", placeholder: "Enter phone number", required: true %>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="form-group">
+        <%= label_tag :message, nil, for: "messageInput" %>
+        <%= text_area_tag :message, nil, class: "form-control", id: "messageInput", placeholder: "Enter message", required: true %>
+      </div>
+    </div>
+  </div>
+  <%= submit_tag "Send", class: "btn btn-primary" %>
+<% end %>

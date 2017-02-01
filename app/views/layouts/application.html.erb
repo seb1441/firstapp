@@ -36,10 +36,45 @@
           <%= text_field_tag(:q, "", class: "form-control mr-sm-2") %>
           <%= submit_tag("Search", class: "btn btn-outline-primary my-2 my-sm-0") %>
         <% end %>
+        <ul class="nav" id="auth-button">
+          <% if user_signed_in? %>
+            <li class="nav dropdown">
+              <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <%= current_user.email %>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <%= link_to('Edit Profile', edit_user_registration_path, class: "dropdown-item") %>
+                <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "dropdown-item") %>
+              </div>
+            </li>
+          <% else %>
+            <%= link_to('Login', new_user_session_path, class: "btn btn-outline-secondary my-2 my-sm-0") %>
+          <% end %>
+        </ul>
       </div>
     </nav>
+    <div class="container">
+      <% if notice != nil && notice != "" %>
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= notice %>
+        </div>
+      <% end %>
 
-    <%= yield %>
+      <% if alert != nil && alert != "" %>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <%= alert %>
+        </div>
+      <% end %>
+
+      <%= yield %>
+
+    </div>
 
     <footer class="footer">
       <div class="container">

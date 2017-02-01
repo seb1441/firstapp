@@ -1,9 +1,8 @@
 <%= content_for :page_title, "New Product" %>
-<div class="container">
-  <h1 class="text-center display-4">New Product</h1>
-  <br>
 
-  <%= render 'form', product: @product %>
+<h1 class="text-center display-4">New Product</h1>
+<br>
 
-  <%= link_to 'Back', products_path, class: "btn btn-secondary button-style btn-sm button-size" %>
-</div>
+<%= render 'form', product: @product %>
+
+<%= link_to 'Back', products_path, class: "btn btn-secondary button-style btn-sm button-size" %>

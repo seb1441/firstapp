@@ -1,14 +1,13 @@
 <%= content_for :page_title, "Products" %>
-<div class="container">
-  <p id="notice"><%= notice %></p>
 
-  <h1 class="text-center display-4">Products</h1>
-  <br>
-  <div class="card-group">
-    <%= render @products, on_products_page: true %>
-  </div>
+<p id="notice"><%= notice %></p>
 
-  <br>
-  <%= link_to 'Add New Product', new_product_path, class: "btn btn-primary button-style center-button" %>
-  <br>
+<h1 class="text-center display-4">Products</h1>
+<br>
+<div class="card-group">
+  <%= render @products, on_products_page: true %>
 </div>
+
+<br>
+<%= button_to 'Add New Product', new_product_path, class: "btn btn-primary center-button" %>
+<br>

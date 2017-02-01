@@ -1,10 +1,9 @@
 <%= content_for :page_title, "Edit Product" %>
-<div class="container">
-  <h1 class="text-center display-4">Editing Product</h1>
-  <br>
 
-  <%= render 'form', product: @product %>
+<h1 class="text-center display-4">Editing Product</h1>
+<br>
 
-  <%= link_to 'Show', @product, class: "btn btn-secondary button-style btn-sm button-size" %><br>
-  <%= link_to 'Back', products_path, class: "btn btn-secondary button-style btn-sm button-size" %>
-</div>
+<%= render 'form', product: @product %>
+
+<%= link_to 'Show', @product, class: "btn btn-secondary button-style btn-sm button-size" %><br>
+<%= link_to 'Back', products_path, class: "btn btn-secondary button-style btn-sm button-size" %>
