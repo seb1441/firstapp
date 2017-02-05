@@ -8,6 +8,7 @@
 
   <%= f.label :password, "Password", for: "inputPassword", class: "sr-only" %>
   <%= f.password_field :password, autocomplete: "off", id: "inputPassword", class: "form-control", placeholder: "Password", required: "", data: { order: "first" } %>
+
   <%# if @minimum_password_length %>
     <!-- <em>(<%= @minimum_password_length %> characters minimum)</em> -->
   <%# end %>

@@ -31,6 +31,9 @@
           <li class="nav-item <%= 'active' if yield(:page_title) == 'Contact' %>">
             <a class="nav-link" href="<%= contact_path %>">CONTACT</a>
           </li>
+          <li class="nav-item <%= 'active' if yield(:page_title) == 'Users' %>">
+            <a class="nav-link" href="<%= users_path %>">USERS</a>
+          </li>
         </ul>
         <%= form_tag("/products", method: "get", class: "form-inline my-2 my-lg-0") do %>
           <%= text_field_tag(:q, "", class: "form-control mr-sm-2") %>
