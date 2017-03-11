@@ -3,12 +3,7 @@
     <p><%= comment.user.email %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
     <span class="rated" data-score="<%= comment.rating %>"></span>
     <small>
-      <% if comment.rating.present? %>
-        <%= " #{comment.rating}/5" %>
-      <% elsif !comment.rating.present? %>
-        0/5
-      <% end %><br>
-      <!-- <%#= " #{comment.rating}/5" if comment.rating.present? %><br> -->
+      <%= " #{comment.rating}/5" %><br>
       <%= comment.body %>
     </small>
     <hr>

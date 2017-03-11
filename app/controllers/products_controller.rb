@@ -12,14 +12,16 @@ class ProductsController < ApplicationController
         @products = Product.where("name LIKE ?", "%#{search_term}%")
       end
     else
-      @products = Product.all
+      # @products = Product.all
+      @products = Product.paginate(:page => params[:page], :per_page => 4)
     end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    @comments = @product.comments.order("created_at DESC")
+    # @comments = @product.comments.order("created_at DESC")
+    @comments = @product.comments.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /products/new

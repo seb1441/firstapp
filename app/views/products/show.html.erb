@@ -21,4 +21,5 @@
   <h3 class="card-title">Customer Reviews</h3>
   <%= render "new_comment" %>
   <%= render "comments" %>
+  <%= will_paginate @comments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 </div>
