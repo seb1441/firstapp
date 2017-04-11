@@ -13,10 +13,14 @@
     </div>
     <% if on_products_page %>
       <%= link_to 'Show', product, class: "btn btn-secondary button-style btn-sm" %>
-      <%= link_to 'Edit', edit_product_path(product), class: "btn btn-secondary button-style btn-sm" %>
-      <%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary button-style btn-sm" %>
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Edit', edit_product_path(product), class: "btn btn-secondary button-style btn-sm" %>
+        <%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-secondary button-style btn-sm" %>
+      <% end %>
     <% else %>
+    <% if signed_in? && current_user.admin? %>
       <%= link_to 'Edit', edit_product_path(product), class: "btn btn-secondary button-style btn-sm" %>
+    <% end %>
       <%= link_to 'Back', products_path, class: "btn btn-secondary button-style btn-sm" %>
     <% end %>
   </div>
