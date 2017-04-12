@@ -71,3 +71,8 @@ gem 'cancancan', '~> 1.10'
 # Pagination
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap4'
+
+# Tests Gem
+group :development, :test do
+  gem 'rspec-rails', '~> 3.5'
+end
