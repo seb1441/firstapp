@@ -76,3 +76,5 @@ gem 'will_paginate-bootstrap4'
 group :development, :test do
   gem 'rspec-rails', '~> 3.5'
 end
+
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
