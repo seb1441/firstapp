@@ -19,6 +19,9 @@
   <% end %>
   <%= link_to 'Back', products_path, class: "btn btn-secondary button-style btn-sm" %>
   <br>
+  <%= form_tag "/payments/create" do %>
+    <%= render partial: "shared/stripe_checkout_button" %>
+  <% end %>
   <hr>
   <h3 class="card-title">Customer Reviews</h3>
   <%= render "new_comment" %>

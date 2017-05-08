@@ -80,3 +80,6 @@ group :development, :test do
 end
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 gem 'rails-controller-testing'
+
+# Payment gem
+gem 'stripe'
