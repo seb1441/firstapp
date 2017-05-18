@@ -1,5 +1,5 @@
   <div class="card">
-    <%= image_tag(product.image_url, class: "card-img-top") %>
+    <%= image_tag(product.image_url, class: "card-img-top img-zoom", data_zoom_image: product.image_url) %>
     <div class="card-block">
       <h4 class="card-title"><%= product.name %></h4>
       <p class="card-text"><%= product.description %></p>
