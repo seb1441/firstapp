@@ -83,3 +83,6 @@ gem 'rails-controller-testing'
 
 # Payment gem
 gem 'stripe'
+
+# Security
+gem "brakeman", :require => false
