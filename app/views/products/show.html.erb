@@ -10,7 +10,7 @@
   <p class="card-text"><strong>Colour: </strong> <%= @product.colour %></p>
   <p class="card-text"><strong>Price: </strong> <%= @product.price %>$</p>
   <br>
-  <p class="card-text"><strong>Average Rating: </strong> <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
+  <p id="average-rating" class="card-text"><strong>Average Rating: </strong> <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
   <br>
   <p class="card-text"><small class="text-muted">Last updated <%= time_ago_in_words(@product.updated_at) %> ago</small></p>
   <br>
