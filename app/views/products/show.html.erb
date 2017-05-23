@@ -21,6 +21,7 @@
   <br>
   <%= form_tag "/payments/create" do %>
     <%= render partial: "shared/stripe_checkout_button" %>
+    <%= hidden_field_tag(:product_id, @product.id) %>
   <% end %>
   <hr>
   <h3 class="card-title">Customer Reviews</h3>
