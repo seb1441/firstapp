@@ -14,7 +14,8 @@ class PaymentsController < ApplicationController
       #   :receipt_email => @user.email
       # )
       charge = Stripe::Charge.create(
-        :amount => @product.price * 100,
+        # :amount => @product.price * 100,
+        :amount => (@product.price * 100).to_i,
         :currency => "usd",
         :source => token,
         :description => params[:stripeEmail]
@@ -22,9 +23,9 @@ class PaymentsController < ApplicationController
       if charge.paid
         Order.create(user_id: @user, product_id: @product.id, total: @product.price)
       end
-      t.integer "user_id"
-      t.integer "product_id"
-      t.float   "total"
+      # t.integer "user_id"
+      # t.integer "product_id"
+      # t.float   "total"
     rescue Stripe::CardError => e
       # The card has been declined
       body = e.json_body
