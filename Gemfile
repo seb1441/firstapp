@@ -86,3 +86,6 @@ gem 'stripe'
 
 # Security
 gem "brakeman", :require => false
+
+# Cache
+gem 'dalli'

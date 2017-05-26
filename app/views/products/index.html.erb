@@ -3,7 +3,9 @@
 <h1 class="text-center display-4">Products</h1>
 <br>
 <div class="card-group">
-  <%= render @products, on_products_page: true %>
+  <% cache(cache_key_for_products) do %>
+    <%= render @products, on_products_page: true %>
+  <% end %>
 </div>
 <%= will_paginate @products, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 <br>

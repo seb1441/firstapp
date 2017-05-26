@@ -1,3 +1,4 @@
+<% cache @product do %>
   <div class="card">
     <%= image_tag(product.image_url, class: "card-img-top img-zoom", data_zoom_image: product.image_url) %>
     <div class="card-block">
@@ -24,3 +25,4 @@
       <%= link_to 'Back', products_path, class: "btn btn-secondary button-style btn-sm" %>
     <% end %>
   </div>
+<% end %>
