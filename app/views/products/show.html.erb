@@ -10,6 +10,7 @@
     <br>
     <p class="card-text"><strong>Colour: </strong> <%= @product.colour %></p>
     <p class="card-text"><strong>Price: </strong> <%= @product.price %>$</p>
+    <% end %>
     <br>
     <p id="average-rating" class="card-text"><strong>Average Rating: </strong> <div class="rated" data-score="<%= @product.average_rating %>"></div></p>
     <br>
@@ -30,4 +31,3 @@
     <%= render "comments" %>
     <%= will_paginate @comments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
   </div>
-<% end %>
