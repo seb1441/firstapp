@@ -89,3 +89,4 @@ gem "brakeman", :require => false
 
 # Cache
 gem 'dalli'
+gem 'redis-rails'
