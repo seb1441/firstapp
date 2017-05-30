@@ -1,5 +1,12 @@
 <%= content_for :page_title, "Show Product" %>
 
+<div id="comments-alert" class="alert alert-info alert-dismissible fade show" style="display:none" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  A new comment was posted!
+</div>
+
 <p id="notice"><%= notice %></p>
 <br>
 <% cache @product do %>

@@ -54,4 +54,7 @@ Rails.application.configure do
 
   # Authetication Devise Gem
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # remove coffeescript generation
+  config.app_generators.javascript_engine = :javascript
 end
