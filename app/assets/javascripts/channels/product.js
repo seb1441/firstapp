@@ -8,6 +8,11 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
   },
 
   received: function(data) {
+    // Called when there's incoming data on the websocket for this channel
     $("#comments-alert").show();
+  },
+
+  listen_to_comments: function() {
+    return this.perform('listen', {});
   }
 });
