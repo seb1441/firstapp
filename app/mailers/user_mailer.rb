@@ -1,5 +1,4 @@
 class UserMailer < ApplicationMailer
-  default from: 'sebastienauriault@gmail.com'
 
   def contact_form(first_name, last_name, email, phone_number, message)
     @first_name = first_name
@@ -17,6 +16,12 @@ class UserMailer < ApplicationMailer
     @appname = "Bike Shop"
     mail( :to => user.email,
           :subject => "Welcome to #{@appname}!")
+  end
+
+  def purchase_confirmation(user, product, price)
+    @appname = "Bike Shop"
+    mail( :to => user.email,
+          :subject => "Order Confirmation - #{@appname}!")
   end
 
 end

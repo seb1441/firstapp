@@ -15,6 +15,7 @@ class PaymentsController < ApplicationController
       )
       if charge.paid
         Order.create(user_id: @user, product_id: @product.id, total: @product.price)
+        UserMailer.purchase_confirmation(@user, @product.name, @product.price).deliver_now
       end
       # t.integer "user_id"
       # t.integer "product_id"
