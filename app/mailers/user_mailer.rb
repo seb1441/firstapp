@@ -20,6 +20,9 @@ class UserMailer < ApplicationMailer
 
   def purchase_confirmation(user, product, price)
     @appname = "Bike Shop"
+    @user = user
+    @product = product
+    @price = price
     mail( :to => user.email,
           :subject => "Order Confirmation - #{@appname}!")
   end
