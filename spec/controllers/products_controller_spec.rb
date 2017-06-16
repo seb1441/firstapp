@@ -1,22 +1,6 @@
 require 'rails_helper'
 
 describe ProductsController, type: :controller do
-
-  context 'GET #index' do
-    before do
-      get :index
-    end
-
-    it 'responds successfully with an HTTP 200 status code' do
-      expect(response).to be_success
-      # expect(response).to have_http_status(200)
-    end
-
-    it 'renders the index template' do
-      expect(response).to render_template('index')
-    end
-  end
-
   let(:user) { FactoryGirl.create(:user) }
   let(:product) { Product.create!(name: "race bike", description: "a perfect race bike", image_url: "1", colour: "red", price: 5) }
 
@@ -24,10 +8,19 @@ describe ProductsController, type: :controller do
     sign_in user
   end
 
+  context 'GET #index' do
+    it 'responds successfully with an HTTP 200 status code' do
+      get :index
+      expect(response).to be_success
+      expect(response).to render_template('index')
+    end
+  end
+
   describe "POST create" do
     it 'creates a product with valid attributes' do
-      post products_path, params: { name: 'Test Product', description: 'Testing', image_url: 'test.jpg', colour: 'red', price: '100' }
-      expect(response).to redirect_to(:back)
+      request.env['HTTP_REFERER'] = 'something'
+      post :create, params: { product: { name: 'Test Product', description: 'Testing', image_url: 'test.jpg', colour: 'red', price: '100' } }
+      expect(response).to redirect_to('something')
 
       product = Product.last
       expect(product).not_to be_nil
@@ -38,7 +31,7 @@ describe ProductsController, type: :controller do
     end
 
     it 'handles invalid attributes' do
-      post products_path, params: {}
+      post :create, params: { product: { name: '' } }
       expect(response).to render_template('new')
     end
   end

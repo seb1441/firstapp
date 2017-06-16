@@ -14,13 +14,10 @@ class PaymentsController < ApplicationController
         :receipt_email => @user.email
       )
       if charge.paid
-        Order.create!(user_id: @user, product_id: @product.id, total: @product.price)
+        Order.create!(user: @user, product: @product, total: @product.price)
         UserMailer.purchase_confirmation(@user, @product.name, @product.price).deliver_now
         flash[:notice] = "Thank you, we have received your order and payment!"
       end
-      # t.integer "user_id"
-      # t.integer "product_id"
-      # t.float   "total"
     rescue Stripe::CardError => e
       # The card has been declined
       body = e.json_body
